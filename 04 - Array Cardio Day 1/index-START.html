@@ -59,7 +59,7 @@
 
     const lived = inventors.reduce((total, inventor) => {
       return total + (inventor.passed - inventor.year);
-    },);
+    },0);
     console.log(lived);
 
     // 5. Sort the inventors by years lived
@@ -85,6 +85,14 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    const analysis = data.reduce((obj, item) => {
+      if (!obj[item]) obj[item] = 0;
+      obj[item]++;
+      return obj;
+    }, {});
+
+    console.log(analysis);
 
   </script>
 </body>
