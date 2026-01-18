@@ -51,6 +51,13 @@
 
     // comments.splice(idIndex, 1);
 
+    const newComments = [
+      ...comments.slice(0, idIndex),
+      ...comments.slice(idIndex + 1)
+    ];
+
+    console.table(newComments);
+
   </script>
 </body>
 </html>
